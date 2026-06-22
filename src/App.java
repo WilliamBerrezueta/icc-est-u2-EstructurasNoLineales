@@ -1,4 +1,7 @@
+import structures.node.Node;
 import structures.trees.BinaryTree;
+import structures.trees.EjercicioDos;
+import structures.trees.EjercicioUno;
 import structures.trees.IntTree;
 import models.Persona;
 
@@ -6,9 +9,28 @@ public class App {
     public static void main(String[] args) throws Exception {
         runIntTree();
         runBinaryTree();
+        runEjercicios();
     }
+    private static void runEjercicios() {
+        EjercicioUno ejercicioUno = new EjercicioUno();
+        int[] numeros = new int[]{5, 3, 7, 2, 4, 6, 8};
+        ejercicioUno.insert(numeros);
+
+        // -------
+
+        EjercicioDos ejercicioDos = new EjercicioDos();
+        int[] numerosDos = new int[]{4,7,9,6,2,3,1};
+        BinaryTree<Integer> tree = new BinaryTree<>();
+        for(int numero : numerosDos){
+            tree.add(numero);
+        }
+        Node<Integer> root = tree.getRoot();
+        ejercicioDos.invertTree(root);
+  
+    }
+    
     private static void runBinaryTree() {
-        BinaryTree<String> arbolString = new BinaryTree<>();
+        //BinaryTree<String> arbolString = new BinaryTree<>();
         BinaryTree<Persona> arbolPersona = new BinaryTree<>();
 
         arbolPersona.add(new Persona("Alice", 30));
@@ -19,32 +41,32 @@ public class App {
 
         System.out.println();
         System.out.println("Recorrido InOrden:");
-        arbolString.inOrden();
+        arbolPersona.inOrden();
 
         System.out.println();
         System.out.println("Recorrido PreOrden:");
-        arbolString.preOrden();
+        arbolPersona.preOrden();
 
         System.out.println();
         System.out.println("Recorrido PosOrden:");
-        arbolString.posOrden();
+        arbolPersona.posOrden();
 
         System.out.println();
         System.out.println("Altura del árbol:");
-        System.out.println(arbolString.getHeight());
+        System.out.println(arbolPersona.getHeight());
 
         System.out.println();
         System.out.println("Peso de el árbol:");
-        System.out.println(arbolString.getSize());
+        System.out.println(arbolPersona.getSize());
     }   
     private static void runIntTree() {
         IntTree arbol = new IntTree();
 
         arbol.add(50);
-        arbol.add(30);
         arbol.add(10);
-        arbol.add(55);
         arbol.add(60);
+        arbol.add(30);
+        arbol.add(55);
         arbol.add(70);
 
         System.out.println();

@@ -82,12 +82,14 @@ public class BinaryTree<T extends Comparable<T>> {
         preOrdenRecursivo(actual.getRight());
     }
 
+    // altura
+
     public int getHeight() {
         return getHeightRecursivo(root);
     }
     private int getHeightRecursivo(Node<T> actual) {
         if (actual == null) {
-            return -1;
+            return 0;
         }
         int heightLeft = getHeightRecursivo(actual.getLeft());
         int heightRight = getHeightRecursivo(actual.getRight());
@@ -95,7 +97,7 @@ public class BinaryTree<T extends Comparable<T>> {
         return masAlto + 1;
     }
 
-    // peso sin recursividad con complejidad O(1) sin linkedList
+    // peso sin recursividad con complejidad O(1)
     public int getSize(){
         return size;
     }

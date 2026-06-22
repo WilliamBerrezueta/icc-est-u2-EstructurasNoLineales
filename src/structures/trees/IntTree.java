@@ -80,12 +80,14 @@ public class IntTree {
         preOrdenRecursivo(actual.getRight());
     }
 
+    /// altura
+
     public int getHeight() {
         return getHeightRecursivo(root);
     }
     private int getHeightRecursivo(Node<Integer> actual) {
         if (actual == null) {
-            return -1;
+            return 0;
         }
         int heightLeft = getHeightRecursivo(actual.getLeft());
         int heightRight = getHeightRecursivo(actual.getRight());
@@ -93,7 +95,7 @@ public class IntTree {
         return masAlto + 1;
     }
 
-    // peso sin recursividad con complejidad O(1) sin linkedList
+    // peso sin recursividad con complejidad O(1)
     public int getSize(){
         return size;
     }

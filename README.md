@@ -155,7 +155,7 @@ Lo demas es lo mismo que que `IntTree`, solo cambia esta parte para que sea vali
 
 ### Captura de salida en consola
 
-````java
+````bash
 Recorrido InOrden:
 Node [value=Persona [nombre=Bob, edad=25]]
 Node [value=Persona [nombre=David, edad=28]]

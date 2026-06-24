@@ -63,18 +63,15 @@ public class App {
         /// CASOS DE PRUEBA
         ///////////////////////////////////////////////////
         /// 
-        probarTodos("Árbol vacío", new int[]{});
-        probarTodos("Árbol con un solo nodo", new int[]{4});
-        probarTodos("Árbol con varios niveles", new int[]{4, 2, 7, 1, 3, 6, 9});
-        probarTodos("Árbol solo hacia la derecha", new int[]{1, 2, 3, 4});
+        probarTodos(new int[]{});
+        probarTodos(new int[]{4});
+        probarTodos(new int[]{4, 2, 7, 1, 3, 6, 9});
+        probarTodos(new int[]{1, 2, 3, 4});
     }
 
-    public static void probarTodos(String nombre, int[] numeros) {
+    public static void probarTodos(int[] numeros) {
 
         System.out.println();
-        System.out.println("------------------------------------");
-        System.out.println(nombre);
-        System.out.println("------------------------------------");
 
         EjercicioUno ejercicioUno = new EjercicioUno();
         EjercicioDos ejercicioDos = new EjercicioDos();

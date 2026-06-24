@@ -222,17 +222,15 @@ La profundidad del árbol depende de la longitud del camino más largo desde la 
 /// CASOS DE PRUEBA
         ///////////////////////////////////////////////////
         /// 
-        probarTodos("Árbol vacío", new int[]{});
-        probarTodos("Árbol con un solo nodo", new int[]{4});
-        probarTodos("Árbol con varios niveles", new int[]{4, 2, 7, 1, 3, 6, 9});
-        probarTodos("Árbol solo hacia la derecha", new int[]{1, 2, 3, 4});
+        probarTodos(new int[]{});
+        probarTodos(new int[]{4});
+        probarTodos(new int[]{4, 2, 7, 1, 3, 6, 9});
+        probarTodos(new int[]{1, 2, 3, 4});
 ````
 
-````java
-------------------------------------
-Árbol vacío
-------------------------------------
+## Arbol vacío
 
+````java
 Ejercicio Uno:
 
 
@@ -258,11 +256,11 @@ Ejercicio Cuatro:
 
 Arbol normal:
 Profundidad máxima: 0
+````
 
-------------------------------------
-Árbol con un solo nodo
-------------------------------------
+## Arbol con un solo nodo
 
+````bash
 Ejercicio Uno:
 
 Node [value=4]
@@ -296,10 +294,10 @@ Arbol normal:
 4
 Profundidad máxima: 1
 
-------------------------------------
-Árbol con varios niveles
-------------------------------------
+````
+## Arbol con varios niveles
 
+````bash
 Ejercicio Uno:
 
 Node [value=1]
@@ -370,11 +368,10 @@ Arbol normal:
         2
                 1
 Profundidad máxima: 3
+````
+## Arbol solo hacia la derecha
 
-------------------------------------
-Árbol solo hacia la derecha
-------------------------------------
-
+````bash
 Ejercicio Uno:
 
 Node [value=1]

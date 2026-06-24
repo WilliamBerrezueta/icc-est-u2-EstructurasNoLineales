@@ -1,6 +1,7 @@
 import structures.node.Node;
 import structures.trees.BinaryTree;
 import structures.trees.EjercicioDos;
+import structures.trees.EjercicioTres;
 import structures.trees.EjercicioUno;
 import structures.trees.IntTree;
 import models.Persona;
@@ -26,6 +27,19 @@ public class App {
         }
         Node<Integer> root = tree.getRoot();
         ejercicioDos.invertTree(root);
+
+        // -------
+
+        EjercicioTres ejercicioTres = new EjercicioTres();
+        int[] numerosTres = {4, 2, 7, 1, 3, 6, 9};
+        BinaryTree<Integer> niveles = new BinaryTree<>();
+        for (int numero : numerosTres) {
+            niveles.add(numero);
+        }
+        Node<Integer> actual = niveles.getRoot();
+        ejercicioTres.imprimirNiveles(actual);
+
+        
   
     }
     

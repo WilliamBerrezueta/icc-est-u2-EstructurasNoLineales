@@ -16,6 +16,8 @@ public class App {
     private static void runEjercicios() {
         EjercicioUno ejercicioUno = new EjercicioUno();
         int[] numeros = new int[]{5, 3, 7, 2, 4, 6, 8};
+        System.out.println();
+        System.out.println("Ejercicio Uno");
         ejercicioUno.insert(numeros);
 
         // -------
@@ -55,7 +57,52 @@ public class App {
         int profundidad = ejercicioCuatro.maxDepth(now);
         System.out.println();
         System.out.println("Profundidad máxima: " + profundidad);
-        
+
+        ///////////////////////////////////////////////////
+        /// //////////////////////////////////////////////7
+        /// CASOS DE PRUEBA
+        ///////////////////////////////////////////////////
+        /// 
+        probarTodos("Árbol vacío", new int[]{});
+        probarTodos("Árbol con un solo nodo", new int[]{4});
+        probarTodos("Árbol con varios niveles", new int[]{4, 2, 7, 1, 3, 6, 9});
+        probarTodos("Árbol solo hacia la derecha", new int[]{1, 2, 3, 4});
+    }
+
+    public static void probarTodos(String nombre, int[] numeros) {
+
+        System.out.println();
+        System.out.println("------------------------------------");
+        System.out.println(nombre);
+        System.out.println("------------------------------------");
+
+        EjercicioUno ejercicioUno = new EjercicioUno();
+        EjercicioDos ejercicioDos = new EjercicioDos();
+        EjercicioTres ejercicioTres = new EjercicioTres();
+        EjercicioCuatro ejercicioCuatro = new EjercicioCuatro();
+
+        System.out.println();
+        System.out.println("Ejercicio Uno:");
+        ejercicioUno.insert(numeros);
+
+        System.out.println();
+        ejercicioDos.invertTree(crearArbol(numeros).getRoot());
+
+        System.out.println();
+        ejercicioTres.imprimirNiveles(crearArbol(numeros).getRoot());
+
+        System.out.println();
+        System.out.println("Ejercicio Cuatro:");
+        Node<Integer> root = crearArbol(numeros).getRoot();
+        ejercicioCuatro.arbolNormal(root);
+        System.out.println("Profundidad máxima: " + ejercicioCuatro.maxDepth(root));
+    }
+    public static BinaryTree<Integer> crearArbol(int[] numeros) {
+        BinaryTree<Integer> tree = new BinaryTree<>();
+        for (int numero : numeros) {
+            tree.add(numero);
+        }
+        return tree;
     }
     
     private static void runBinaryTree() {

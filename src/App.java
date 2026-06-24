@@ -1,5 +1,6 @@
 import structures.node.Node;
 import structures.trees.BinaryTree;
+import structures.trees.EjercicioCuatro;
 import structures.trees.EjercicioDos;
 import structures.trees.EjercicioTres;
 import structures.trees.EjercicioUno;
@@ -31,7 +32,7 @@ public class App {
         // -------
 
         EjercicioTres ejercicioTres = new EjercicioTres();
-        int[] numerosTres = {4, 2, 7, 1, 3, 6, 9};
+        int[] numerosTres = {4, 3, 8, 1, 3, 6, 9};
         BinaryTree<Integer> niveles = new BinaryTree<>();
         for (int numero : numerosTres) {
             niveles.add(numero);
@@ -39,8 +40,22 @@ public class App {
         Node<Integer> actual = niveles.getRoot();
         ejercicioTres.imprimirNiveles(actual);
 
+        // --------
+
+        EjercicioCuatro ejercicioCuatro = new EjercicioCuatro();
+        int[] numerosCuatro = {5,2,7,1,3,8,9};
+        BinaryTree<Integer> fondo = new BinaryTree<>();
+        for (int numero : numerosCuatro) {
+            fondo.add(numero);
+        }
+        Node<Integer> now = fondo.getRoot();
+        System.out.println();
+        System.out.println("Ejercicio Cuatro");
+        ejercicioCuatro.arbolNormal(now);
+        int profundidad = ejercicioCuatro.maxDepth(now);
+        System.out.println();
+        System.out.println("Profundidad máxima: " + profundidad);
         
-  
     }
     
     private static void runBinaryTree() {
